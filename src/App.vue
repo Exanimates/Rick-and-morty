@@ -1,10 +1,11 @@
 <template>
-    <div class="episodes">
-        <select name="seasons" v-model="selectedSeason">
-            <option :key="season" v-for="season in seasons" :value="season">
-                {{ season }}
-            </option>
-        </select>
+    Выберите сезон:
+    <select name="seasons" v-model="selectedSeason">
+        <option :key="season" v-for="season in seasons" :value="season">
+            {{ season }}
+        </option>
+    </select>
+    <div class="episodes">       
         <div :key="episode.id" v-for="episode in filteredEpisodes" class="episode">
             <h3>{{ episode.name }}</h3>
             <div>Дата: {{ episode.air_date }}</div>
@@ -22,7 +23,7 @@ export default {
         return {
             text: 'Rick and morty',
             episodes: [],
-            selectedSeason: null
+            selectedSeason: "01"
         }
     },
     computed: {
