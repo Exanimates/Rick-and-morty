@@ -3,6 +3,8 @@ import { createWebHashHistory, createRouter } from "vue-router";
 import Main from './Main.vue';
 import Episode from './Episode.vue';
 import EpisodeList from './EpisodeList.vue'
+import Character from './Character.vue'
+
 
 const routes = [
     {
@@ -14,6 +16,12 @@ const routes = [
       path: "/episode/:id",
       name: "Episode",
       component: Episode,
+      props: true
+    },
+    {
+      path: "/character/:id",
+      name: "Character",
+      component: Character,
       props: true
     },
   ];
