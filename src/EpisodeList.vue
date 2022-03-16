@@ -5,8 +5,8 @@
             {{ season }}
         </option>
     </select>
-    <div class="episodes">       
-        <div :key="episode.id" v-for="episode in filteredEpisodes" class="episode">
+    <div class="elems-content">       
+        <div :key="episode.id" v-for="episode in filteredEpisodes" class="elems">
             <h3><router-link :to="{name: 'Episode', params: { id: episode.id}}">{{ episode.name }}</router-link></h3>
             <div>Дата: {{ episode.air_date }}</div>
             <div>Номер: {{ episode.episode.slice(4, 6) }}</div>

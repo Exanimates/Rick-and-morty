@@ -3,8 +3,8 @@
     <div>Название: <h1> {{ episode.name }}</h1></div>
     <div>Дата выхода: {{episode.air_date}}</div>
 
-    <div class="characters">       
-        <div :key="character" v-for="character in charactersIds" class="character">
+    <div class="elems-content">       
+        <div :key="character" v-for="character in charactersIds" class="elems">
             <div>Персонаж:</div>
             <h3><router-link :to="{name: 'Character', params: { id: character}}">{{ character }}</router-link></h3>
         </div>

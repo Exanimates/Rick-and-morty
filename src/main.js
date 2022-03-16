@@ -4,7 +4,7 @@ import Main from './Main.vue';
 import Episode from './Episode.vue';
 import EpisodeList from './EpisodeList.vue'
 import Character from './Character.vue'
-
+import Location from './Location.vue'
 
 const routes = [
     {
@@ -22,6 +22,12 @@ const routes = [
       path: "/character/:id",
       name: "Character",
       component: Character,
+      props: true
+    },
+    {
+      path: "/location/:id",
+      name: "Location",
+      component: Location,
       props: true
     },
   ];
